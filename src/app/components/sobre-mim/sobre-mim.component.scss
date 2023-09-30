@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  justify-content: space-around;
+  margin-top: 55px;
+}
+
+.logo{
+  text-transform: uppercase;
+  font-style: italic;
+  margin-top: 10px;
+  width: 300px;
+  color: #5d5d5d;
+  & p{
+    font-size: 25px;
+  }
+}
+
+.img{
+  border-radius: 15px;
+}
