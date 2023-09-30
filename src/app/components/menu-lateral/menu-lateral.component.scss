@@ -1,4 +1,3 @@
-/* Estilos CSS para o menu */
 .menu {
   position: fixed;
   left: 20px;
@@ -10,17 +9,12 @@
   justify-content: center;
 }
 
-h3{
-  color: #ffff;
-}
-
 .menu ul {
   list-style: none;
   padding: 0;
 }
 
 .menu li {
-
   margin-bottom: 20px;
 }
 
@@ -28,4 +22,19 @@ h3{
   text-decoration: none;
   color: rgb(45, 45, 45);
   font-size: 24px;
+}
+
+
+.menu .mobile-only {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .menu .mobile-only {
+    display: block;
+  }
+  .menu ul {
+    display: none;
+  }
 }

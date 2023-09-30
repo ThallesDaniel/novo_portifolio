@@ -1,7 +1,7 @@
 .container {
   width: 100%;
   display: flex;
-  flex-wrap: wrap; /* Adicione flex-wrap para lidar com quebras de linha */
+  flex-wrap: wrap;
   gap: 30px;
   justify-content: space-around;
   margin-top: 60px;
@@ -11,29 +11,32 @@
   text-transform: uppercase;
   font-style: italic;
   margin-top: 10px;
-  max-width: 300px; /* Use max-width em vez de width para evitar estouro em telas menores */
-  width: 100%; /* Defina a largura como 100% para que a imagem se ajuste ao seu contêiner */
+  max-width: 300px;
+  width: 100%;
   color: #5d5d5d;
 }
-
+li{
+list-style: none;
+text-align: left;
+}
 .logo p {
   font-size: 25px;
 }
 
 .img {
   border-radius: 15px;
-  max-width: 100%; /* Para garantir que a imagem não seja maior do que seu contêiner */
-  height: auto; /* Manter a proporção da imagem */
+  max-width: 100%;
+  height: auto;
 }
 
-/* Media query para ajustar o estilo em telas menores */
+
 @media screen and (max-width: 768px) {
   .container {
-    flex-direction: column; /* Mudar para um layout de coluna em telas menores */
-    align-items: center; /* Centralizar os elementos na coluna */
+    flex-direction: column;
+    align-items: center;
   }
 
   .logo {
-    text-align: center; /* Centralizar o texto */
+    text-align: center;
   }
 }
