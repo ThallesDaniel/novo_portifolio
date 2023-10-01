@@ -12,12 +12,14 @@ import { MenuLateralComponent } from './components/menu-lateral/menu-lateral.com
 import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
+import { ProjetosComponent } from './components/projetos/projetos.component';
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     SobreMimComponent,
-    MenuLateralComponent
+    MenuLateralComponent,
+    ProjetosComponent
   ],
   imports: [
     BrowserModule,
