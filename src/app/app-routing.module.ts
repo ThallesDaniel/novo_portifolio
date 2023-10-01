@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-/* import { HomeComponent } from './home.component';
-import { SobreComponent } from './sobre.component';
-import { PlanosComponent } from './planos.component';
-import { CoberturaComponent } from './cobertura.component'; */
+import { ProjetosComponent } from './components/projetos/projetos.component';
+import { SobreMimComponent } from './components/sobre-mim/sobre-mim.component';
 
 const routes: Routes = [
-/*   { path: '', component: HomeComponent },
-  { path: 'sobre', component: SobreComponent },
-  { path: 'planos', component: PlanosComponent },
-  { path: 'cobertura', component: CoberturaComponent }, */
+  { path: '', component: SobreMimComponent },
+  { path: 'sobre', component: SobreMimComponent },
+  { path: 'projetos', component: ProjetosComponent },
+
 ];
 
 @NgModule({
