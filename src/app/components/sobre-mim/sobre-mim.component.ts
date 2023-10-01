@@ -7,10 +7,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./sobre-mim.component.scss']
 })
 export class SobreMimComponent {
-  constructor(private router: Router) {}
-  redirectToProjects() {
-    console.log('Redirecionando para /projetos');
-    this.router.navigate(['/projetos']); // Redireciona o usuário para a rota /projetos
-  }
+  // Adicione uma variável de controle para mostrar/ocultar o componente app-projetos
+  mostrarProjetos: boolean = false;
 
+  constructor(private router: Router) {}
+
+  // Método para redirecionar para a rota de projetos
+  redirectToProjects() {
+    this.mostrarProjetos = true; // Define a variável como verdadeira
+    this.router.navigate(['/projetos']); // Redireciona para a rota de projetos (ajuste isso conforme suas configurações de rota)
+  }
 }
