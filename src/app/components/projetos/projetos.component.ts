@@ -8,16 +8,6 @@ import { Router } from '@angular/router';
 })
 export class ProjetosComponent {
 
-  constructor(private renderer: Renderer2, private el: ElementRef, private router: Router) { }
 
-  onClickOption(event: Event) {
-    const options = this.el.nativeElement.querySelectorAll('.option');
-
-    options.forEach((option: any) => {
-      this.renderer.removeClass(option, 'active');
-    });
-
-    this.renderer.addClass(event.target, 'active');
-  }
 
 }
