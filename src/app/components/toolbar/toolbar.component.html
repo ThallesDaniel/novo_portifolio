@@ -1,10 +1,19 @@
+<mat-toolbar>
+  <button class="menu-button" (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="logo">Thalles Andrade <span style="font-size: x-small;"><strong>Fullstack Developer</strong></span></span>
+  <ul class="navbar-list" [ngClass]="{'show-menu': isMenuOpen}">
+    <!--<li>   <mat-select [(ngModel)]="selectedLanguage" (selectionChange)="changeLanguage()">
+      <mat-option value="pt">Português</mat-option>
+      <mat-option value="en">Inglês</mat-option>
+      <mat-option value="es">Espanhol</mat-option>
+    </mat-select>
+   </li>-->
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/sobre-mim">Sobre mim</a></li>
+    <li><a routerLink="/projetos">Projetos</a></li>
+    <li><a href="https://github.com/ThallesDaniel" target="_blank">Meu github</a></li>
+  </ul>
+</mat-toolbar>
 
-  <mat-toolbar>
-    <span class="logo">Thalles Andrade <span style="font-size: x-small;"><strong>Fullstack Developer</strong></span></span>
-    <ul class="navbar-list">
-      <li><a routerLink="/">Home</a></li>
-      <li><a routerLink="/sobre-mim">Sobre mim</a></li>
-      <li><a routerLink="/projetos">Projetos</a></li>
-      <li><a href="https://github.com/ThallesDaniel" target="_blank">Meu github</a></li>
-    </ul>
-  </mat-toolbar>

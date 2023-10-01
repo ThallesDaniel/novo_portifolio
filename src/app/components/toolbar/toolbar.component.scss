@@ -23,11 +23,10 @@
 
 .navbar-list li {
   margin-right: 20px;
-  display: flex; /* Ativa o modelo de caixa flexível */
-  align-items: center; /* Alinha verticalmente os elementos */
+  display: flex;
+  align-items: center;
 }
 
-/* Estilizar o último item da lista */
 li:last-child {
   border: 0;
   border-radius: 20px;
@@ -51,7 +50,9 @@ li:last-child {
   background-color: #313131;
 }
 
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 768px) {
+
   .navbar-list {
     display: none;
   }
@@ -61,5 +62,38 @@ li:last-child {
     align-items: flex-start;
   }
 
+  .menu-button {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 10px;
+  }
 
+  .menu-button mat-icon {
+    font-size: 24px;
+  }
+
+  .show-menu {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    background-color: #fff;
+    z-index: 100;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .show-menu li {
+    margin-right: 0;
+    padding: 10px 18px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .menu-button {
+    display: none;
+  }
 }

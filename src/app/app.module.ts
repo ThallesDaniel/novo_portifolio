@@ -9,7 +9,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { MenuLateralComponent } from './components/menu-lateral/menu-lateral.component';
-
+import { TranslateModule } from '@ngx-translate/core';
+import { FormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,11 +21,14 @@ import { MenuLateralComponent } from './components/menu-lateral/menu-lateral.com
   ],
   imports: [
     BrowserModule,
+    MatSelectModule,
+    FormsModule,
     MatToolbarModule,
     AppRoutingModule,
     MatIconModule,
     MatButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    TranslateModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu-lateral.component.scss']
 })
 export class MenuLateralComponent {
+  isMenuVisible = false;
 
+  toggleMenu() {
+    this.isMenuVisible = !this.isMenuVisible;
+  }
 }
