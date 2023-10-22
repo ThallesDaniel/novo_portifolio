@@ -1,5 +1,7 @@
 import { Component, ElementRef, Renderer2 } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-toolbar',
@@ -10,7 +12,7 @@ export class ToolbarComponent {
   isMenuOpen = false;
   selectedLanguage = 'pt';
 
-  constructor(private translateService: TranslateService,private elementRef: ElementRef, private renderer: Renderer2) {
+  constructor(private translateService: TranslateService, private elementRef: ElementRef, private renderer: Renderer2, private router: Router) {
     this.translateService.setDefaultLang('pt');
   }
 
@@ -25,6 +27,13 @@ export class ToolbarComponent {
       }
     }
   }
+
+  refreshPage() {
+    this.router.navigate(['/']).then(() => {
+      location.reload();
+    });
+  }
+
 
   changeLanguage() {
     this.translateService.use(this.selectedLanguage);
