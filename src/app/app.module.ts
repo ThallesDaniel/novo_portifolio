@@ -13,26 +13,29 @@ import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { ProjetosComponent } from './components/projetos/projetos.component';
+import {MatTabsModule} from '@angular/material/tabs';
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    ToolbarComponent,
-    SobreMimComponent,
-    MenuLateralComponent,
-    ProjetosComponent
-  ],
-  imports: [
-    BrowserModule,
-    MatSelectModule,
-    FormsModule,
-    MatToolbarModule,
-    AppRoutingModule,
-    MatIconModule,
-    MatButtonModule,
-    BrowserAnimationsModule,
-    TranslateModule.forRoot()
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        ToolbarComponent,
+        SobreMimComponent,
+        MenuLateralComponent,
+        ProjetosComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        MatSelectModule,
+        FormsModule,
+        MatToolbarModule,
+        AppRoutingModule,
+        MatIconModule,
+        MatButtonModule,
+        BrowserAnimationsModule,
+        TranslateModule.forRoot(),
+        MatTabsModule
+    ]
 })
 export class AppModule { }
