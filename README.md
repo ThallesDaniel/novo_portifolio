@@ -1,27 +1,23 @@
-# Portifolio
+# Thalles Daniel - Desenvolvedor Full-Stack Web
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+Olá! Meu nome é Thalles Daniel e sou um desenvolvedor Full-Stack Web apaixonado por criar soluções inovadoras e eficientes. Com uma sólida formação e experiência em diversas tecnologias, estou sempre pronto para enfrentar desafios e entregar produtos de alta qualidade. Aqui está um pouco do que posso oferecer:
 
-## Development server
+## Tecnologias Principais:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Front-end: HTML, SCSS, JavaScript, TypeScript, Angular
+Back-end: Java, Spring, Python, PHP
+Banco de Dados: PostgreSQL
+Autodidata em Hacking Ético e Segurança Digital
 
-## Code scaffolding
+## Conhecimentos Adicionais:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Além das principais tecnologias, possuo experiência e habilidades em outras bibliotecas, linguagens e frameworks, incluindo:
 
-## Build
+Ext.js
+Next.js
+JSP
+Flask
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Estou sempre buscando aprender mais e me manter atualizado com as últimas tendências e melhores práticas da indústria. Estou disponível para colaborações, projetos desafiadores e oportunidades que me permitam crescer profissionalmente.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Vamos construir algo incrível juntos!
