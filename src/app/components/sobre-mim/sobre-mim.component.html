@@ -1,23 +1,11 @@
 <div class="container">
   <div class="info">
-    <h1 class="logo"  >Muito prazer...</h1>
-    <p>
-      ...me chamo Thalles Daniel. Sou um desenvolvedor Full-Stack Web com
-      conhecimento em:
-    </p>
-    <ul>
-      <li>HTML/SCSS/JAVASCRIPT || TYPESCRIPT</li>
-      <li>ANGULAR</li>
-      <li>PgSQL</li>
-      <li>JAVA / SPRING</li>
-      <li>PYTHON</li>
-      <li>DOCKER</li>
-      <li>PHP</li>
-    </ul>
-    <p  >
-      Possuo conhecimento em outras bibliotecas, linguagens e frameworks, dentre
-      elas, Ext.js, Next.js, JSP e Flask
-    </p>
+    <h1 class="logo"  >Thalles Daniel - Desenvolvedor Full-Stack Web</h1>
+
+      <h2>{{ tituloAtual }}</h2>
+      <p>{{ textoAtual }}</p>
+      <button (click)="proximoTexto()">Próximo</button>
+
     <button class="projetos" (click)="redirectToProjects()">Clique aqui para ver meus projetos</button>
   </div>
   <div class="image">
