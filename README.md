@@ -5,8 +5,11 @@ Olá! Meu nome é Thalles Daniel e sou um desenvolvedor Full-Stack Web apaixonad
 ## Tecnologias Principais:
 
 Front-end: HTML, SCSS, JavaScript, TypeScript, Angular
+
 Back-end: Java, Spring, Python, PHP
+
 Banco de Dados: PostgreSQL
+
 Autodidata em Hacking Ético e Segurança Digital
 
 ## Conhecimentos Adicionais:
@@ -14,8 +17,11 @@ Autodidata em Hacking Ético e Segurança Digital
 Além das principais tecnologias, possuo experiência e habilidades em outras bibliotecas, linguagens e frameworks, incluindo:
 
 Ext.js
+
 Next.js
+
 JSP
+
 Flask
 
 Estou sempre buscando aprender mais e me manter atualizado com as últimas tendências e melhores práticas da indústria. Estou disponível para colaborações, projetos desafiadores e oportunidades que me permitam crescer profissionalmente.
