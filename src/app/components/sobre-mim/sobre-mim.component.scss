@@ -1,4 +1,6 @@
-
+.text-container, .text-p {
+  max-width: 400px;
+}
 
 .container {
   width: 100%;
@@ -6,7 +8,7 @@
   flex-wrap: wrap;
   gap: 30px;
   justify-content: space-around;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 .logo {

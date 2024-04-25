@@ -1,16 +1,24 @@
 <div class="container">
-  <div class="info">
-    <h1 class="logo"  >Thalles Daniel - Desenvolvedor Full-Stack Web</h1>
-
-      <h2>{{ tituloAtual }}</h2>
-      <p>{{ textoAtual }}</p>
-      <button (click)="proximoTexto()">Próximo</button>
-
-    <button class="projetos" (click)="redirectToProjects()">Clique aqui para ver meus projetos</button>
-  </div>
   <div class="image">
     <img src="../../././../assets/img/Thalles.png" alt="Thalles Daniel(EU)" class="img" />
+    <p class="text-p">Olá! Meu nome é Thalles Daniel e sou um desenvolvedor Full-Stack Web apaixonado por criar soluções
+      inovadoras e eficientes. Com uma sólida formação e experiência em diversas tecnologias, estou sempre
+      pronto para enfrentar desafios e entregar produtos de alta qualidade.
+      Estou disponível para colaborações, projetos desafiadores e oportunidades que me permitam crescer profissionalmente.
+    </p>
+    <button class="projetos" (click)="redirectToProjects()">Clique aqui para ver meus projetos</button>
   </div>
-</div>
+  <div class="text-container">
+    <h1 class="logo">Thalles Daniel - Desenvolvedor Full-Stack Web</h1>
 
+    <h3 class="logo">{{ titulos[indiceTituloAtual] }}</h3>
+    <p>{{ subtitulos[indiceSubTituloAtual] }}</p>
+    <ul>
+      <li *ngFor="let texto of textos[indiceTextoAtual].split('\n')">{{ texto }}</li>
+    </ul>
+    <button class="projetos" (click)="proximoTexto()">{{ estadoBotao }}</button>
+
+  </div>
+
+</div>
 <app-projetos *ngIf="mostrarProjetos"></app-projetos>

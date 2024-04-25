@@ -8,50 +8,48 @@ import { Router } from '@angular/router';
 })
 export class SobreMimComponent implements OnInit{
   mostrarProjetos: boolean = false;
+  estadoBotao: string = 'Próximo';
 
   tituloAtual: string = '';
-  titulos: string[] = ['Tecnologias Principais:', 'Conhecimentos Adicionais'];
+  titulos: string[] = ['Tecnologias Principais:', 'Conhecimentos Adicionais:'];
   indiceTituloAtual: number = 0;
 
-  textoAtual: string = 'Olá! Meu nome é Thalles Daniel e sou um desenvolvedor ' +
-    'Full-Stack Web apaixonado por criar soluções inovadoras e eficientes. ' +
-    'Com uma sólida formação e experiência em diversas tecnologias, estou sempre pronto para enfrentar desafios e' +
-    ' entregar produtos de alta qualidade. ' +
-    'Aqui está um pouco do que posso oferecer:';
-  textos: string[] = ['Front-end: HTML, SCSS, JavaScript, TypeScript, Angular\n' +
-  '\n' +
+  subtituloAtual: string = '';
+  subtitulos: string[] = ['Possuo conhecimento aprofundado nas seguntes tecnologias:', 'Além das principais tecnologias, possuo experiência e habilidades em outras bibliotecas, linguagens e frameworks, incluindo: '];
+  indiceSubTituloAtual: number = 0;
+
+  textoAtual: string = '';
+  textos: string[] = [
+  'Front-end: HTML, SCSS, JavaScript, TypeScript, Angular\n' +
   'Back-end: Java, Spring, Python, PHP\n' +
-  '\n' +
   'Banco de Dados: PostgreSQL\n' +
-  '\n' +
-  'Autodidata em Hacking Ético e Segurança Digital', 'Além das principais tecnologias, possuo experiência e habilidades em outras bibliotecas, linguagens e frameworks, incluindo:\n' +
-  '\n' +
+  'Autodidata em Hacking Ético e Segurança Digital',
   'Ext.js\n' +
-  '\n' +
   'Next.js\n' +
-  '\n' +
   'JSP\n' +
-  '\n' +
-  'Flask\n' +
-  '\n' +
-  'Estou sempre buscando aprender mais e me manter atualizado com as últimas tendências e melhores práticas da indústria.' +
-  ' Estou disponível para colaborações, projetos desafiadores e oportunidades que me permitam crescer profissionalmente.'];
+  'Flask\n'];
   indiceTextoAtual: number = 0;
   ngOnInit(): void {
   }
   constructor(private router: Router) {}
-  proximoTexto() {
-    this.indiceTituloAtual++;
-    if (this.indiceTituloAtual === this.titulos.length) {
-      this.indiceTituloAtual = 0;
+  proximoIndice(indiceAtual: number, array: any[]): number {
+    indiceAtual++;
+    if (indiceAtual === array.length) {
+      indiceAtual = 0;
     }
+    return indiceAtual;
+  }
+
+  proximoTexto() {
+    this.indiceTituloAtual = this.proximoIndice(this.indiceTituloAtual, this.titulos);
     this.tituloAtual = this.titulos[this.indiceTituloAtual];
 
-    this.indiceTextoAtual++;
-    if (this.indiceTextoAtual === this.textos.length) {
-      this.indiceTextoAtual = 0;
-    }
+    this.indiceSubTituloAtual = this.proximoIndice(this.indiceSubTituloAtual, this.subtitulos);
+    this.subtituloAtual = this.subtitulos[this.indiceSubTituloAtual];
+
+    this.indiceTextoAtual = this.proximoIndice(this.indiceTextoAtual, this.textos);
     this.textoAtual = this.textos[this.indiceTextoAtual];
+    this.estadoBotao = this.estadoBotao === 'Próximo' ? 'Anterior' : 'Próximo';
   }
   redirectToProjects() {
     this.mostrarProjetos = true;
