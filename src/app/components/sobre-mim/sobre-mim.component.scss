@@ -56,9 +56,11 @@ text-align: left;
     opacity: 1;
   }
 }
+/*
 .about__skills-title {
   text-align: center;
 }
+*/
 
 .about__skills-img {
   position: relative;
@@ -106,6 +108,8 @@ text-align: left;
 }
 .grid {
   display: grid;
+  margin-top: 10px;
+  float: left;
   gap: 1.5rem;
 }
 .animation-left{
@@ -144,6 +148,9 @@ text-align: left;
   }
   .text-container{
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .logo {
     text-align: center;
@@ -157,5 +164,10 @@ text-align: left;
   }
   .about__skills-img {
     width: 40px;
+  }
+  .grid {
+    display: grid;
+    margin-top: 10px;
+    gap: 1.5rem;
   }
 }
