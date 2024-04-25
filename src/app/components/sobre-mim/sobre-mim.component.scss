@@ -56,11 +56,12 @@ text-align: left;
     opacity: 1;
   }
 }
-/*
+
 .about__skills-title {
+  margin-top: 15px;
   text-align: center;
 }
-*/
+
 
 .about__skills-img {
   position: relative;
@@ -101,7 +102,7 @@ text-align: left;
 }
 
 .about__skills-content {
-  grid-template-columns: repeat(5, max-content);
+  grid-template-columns: repeat(10, max-content);
   justify-content: center;
   align-items: center;
   gap: 2rem 1.5rem;
