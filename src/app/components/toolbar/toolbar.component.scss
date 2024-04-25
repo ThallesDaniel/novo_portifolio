@@ -22,6 +22,7 @@
 
 
 .navbar-list li {
+  font-size: small;
   margin-right: 20px;
   display: flex;
   align-items: center;
@@ -29,6 +30,7 @@
 
 li:last-child {
   border: 0;
+  font-size: small;
   border-radius: 20px;
   padding: 10px 18px;
   color: #FFF;
@@ -83,6 +85,7 @@ li:last-child {
     display: flex !important;
     flex-direction: column;
     position: absolute;
+    font-size: small;
     top: 64px;
     left: 0;
     background-color: #fff;
