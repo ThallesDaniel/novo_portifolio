@@ -1,28 +1,145 @@
 <div class="container">
-  <div class="info">
-    <h1 class="logo"  >Muito prazer...</h1>
-    <p>
-      ...me chamo Thalles Daniel. Sou um desenvolvedor Full-Stack Web com
-      conhecimento em:
-    </p>
-    <ul>
-      <li>HTML/SCSS/JAVASCRIPT || TYPESCRIPT</li>
-      <li>ANGULAR</li>
-      <li>PgSQL</li>
-      <li>JAVA / SPRING</li>
-      <li>PYTHON</li>
-      <li>DOCKER</li>
-      <li>PHP</li>
-    </ul>
-    <p  >
-      Possuo conhecimento em outras bibliotecas, linguagens e frameworks, dentre
-      elas, Ext.js, Next.js, JSP e Flask
-    </p>
-    <button class="projetos" (click)="redirectToProjects()">Clique aqui para ver meus projetos</button>
-  </div>
-  <div class="image">
+  <!--lado esquerdo-->
+  <div class="image animation-left">
     <img src="../../././../assets/img/Thalles.png" alt="Thalles Daniel(EU)" class="img" />
+    <p class="text-p">Olá! Meu nome é Thalles Daniel e sou um desenvolvedor Full-Stack Web apaixonado por criar soluções
+      inovadoras e eficientes. Com uma sólida formação e experiência em diversas tecnologias, estou sempre
+      pronto para enfrentar desafios e entregar produtos de alta qualidade.
+      Estou disponível para colaborações, projetos desafiadores e oportunidades que me permitam crescer profissionalmente.
+    </p>
+    <button class="projetos" (click)="redirectToProjects()" (mouseenter)="hover = true" (mouseleave)="hover = false">
+      Clique aqui para ver meus projetos &nbsp; <span class="arrow" [class.show]="hover">&#9660;</span>
+    </button>
   </div>
-</div>
+  <!--lado direito-->
+  <div class="text-container animation-right">
+    <h1 class="logo">Thalles Daniel - Desenvolvedor Full-Stack Web</h1>
 
+    <h3 class="logo">{{ titulos[indiceTituloAtual] }}</h3>
+    <p>{{ subtitulos[indiceSubTituloAtual] }}</p>
+    <ul>
+      <li *ngFor="let texto of textos[indiceTextoAtual].split('\n')">{{ texto }}</li>
+    </ul>
+    <button class="projetos" (click)="proximoTexto()">{{ estadoBotao }}</button>
+    <div class="about__skills">
+      <h3 class="about__skills-title logo">Aqui estão todas minhas Skills</h3>
+
+      <div class="about__skills-content grid">
+
+        <div class="about__skills-img">
+          <!-- HTML -->
+          <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="image HTML" class="about__skills-img">
+          <p class="about__skills-hover-text">HTML</p>
+        </div>
+
+        <div class="about__skills-img">
+          <!-- CSS -->
+          <img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="image CSS" class="about__skills-img">
+          <p class="about__skills-hover-text">CSS</p>
+        </div>
+
+        <div class="about__skills-img">
+          <!-- JavaScript -->
+          <img src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg" alt="image JavaScript" class="about__skills-img">
+          <p class="about__skills-hover-text">JavaScript</p>
+        </div>
+
+        <div class="about__skills-img">
+          <!-- SASS -->
+          <img src="https://cdn.worldvectorlogo.com/logos/sass-1.svg" alt="image SASS" class="about__skills-img">
+          <p class="about__skills-hover-text">SASS</p>
+        </div>
+
+        <div class="about__skills-img">
+          <!-- TypeScript -->
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="image type" class="about__skills-img">
+          <p class="about__skills-hover-text">TypeScript</p>
+        </div>
+
+        <div class="about__skills-img">
+          <!-- Angular -->
+          <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*Klh1l7wkoG6PDPb9A5oCHQ.png" alt="image Angular" class="about__skills-img">
+          <p class="about__skills-hover-text">Angular</p>
+        </div>
+
+        <div class="about__skills-img">
+          <!-- java -->
+          <img src="https://cdn.worldvectorlogo.com/logos/java.svg" alt="image Java" class="about__skills-img">
+          <p class="about__skills-hover-text">Java</p>
+        </div>
+
+        <div class="about__skills-img">
+          <!-- Spring -->
+          <img src="https://cdn.worldvectorlogo.com/logos/spring-3.svg" alt="image Spring" class="about__skills-img">
+          <p class="about__skills-hover-text">Spring</p>
+        </div>
+
+        <div class="about__skills-img">
+          <!-- Python -->
+          <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg" alt="image Python" class="about__skills-img">
+          <p class="about__skills-hover-text">Python</p>
+        </div>
+
+        <div class="about__skills-img">
+          <!-- Postgres -->
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/993px-Postgresql_elephant.svg.png"
+               alt="image Postgres" class="about__skills-img">
+          <p class="about__skills-hover-text">PostgreSQL</p>
+        </div>
+
+        <div class="about__skills-img">
+          <!-- next-js -->
+          <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="image next-js" class="about__skills-img">
+          <p class="about__skills-hover-text">Next js</p>
+        </div>
+
+        <div class="about__skills-img">
+          <!-- ext.js -->
+          <img src="https://media.dev.to/cdn-cgi/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmu70yz6oo2w1xdlfw3dc.png" alt="image Ext.js" class="about__skills-img">
+          <p class="about__skills-hover-text">Ext.js</p>
+        </div>
+
+        <div class="about__skills-img">
+          <!-- Flask -->
+          <img src="https://cdn.worldvectorlogo.com/logos/flask.svg" alt="image Flask" class="about__skills-img">
+          <p class="about__skills-hover-text">Flask</p>
+        </div>
+
+        <div class="about__skills-img">
+          <!-- Git -->
+          <img src="https://cdn.worldvectorlogo.com/logos/git-icon.svg" alt="image Git" class="about__skills-img">
+          <p class="about__skills-hover-text">Git</p>
+        </div>
+
+        <div class="about__skills-img">
+          <!-- GitHub -->
+          <img src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" alt="image GitHub" class="about__skills-img">
+          <p class="about__skills-hover-text">GitHub</p>
+        </div>
+
+        <div class="about__skills-img">
+          <!-- Kali -->
+          <img src="https://play-lh.googleusercontent.com/Oriscl3_nvmDPncct6gStmNuQW_4tqHVozy1skG0vd8Jk22KYNMYYJfKq0vcyU-NKdw"
+               alt="image Kali" class="about__skills-img">
+          <p class="about__skills-hover-text">Hacking</p>
+        </div>
+
+        <div class="about__skills-img">
+          <!-- Docker -->
+          <img src="https://cdn.worldvectorlogo.com/logos/docker.svg" alt="image Docker" class="about__skills-img">
+          <p class="about__skills-hover-text">Docker</p>
+        </div>
+
+        <div class="about__skills-img">
+          <!-- Scrum -->
+          <img src="https://banner2.cleanpng.com/20180803/yfq/kisspng-scrum-agile-software-development-project-sprint-re-agile-methodology-logo-info-5b64a581dc6963.2993523015333226259028.jpg"
+               alt="image Scrum" class="about__skills-img">
+          <p class="about__skills-hover-text">Scrum</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
 <app-projetos *ngIf="mostrarProjetos"></app-projetos>
