@@ -34,13 +34,27 @@ text-align: left;
   filter: drop-shadow(0 0 0.55rem #383ea2);
 }
 
-.projetos{
+.projetos {
+  position: relative;
   border: 0;
   border-radius: 20px;
   padding: 10px 18px;
   color: #FFF;
   background-color: #63c6ff;
   cursor: pointer;
+
+  .arrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+    opacity: 0;
+  }
+
+  .arrow.show {
+    opacity: 1;
+  }
 }
 .about__skills-title {
   text-align: center;
@@ -59,9 +73,8 @@ text-align: left;
 
 .about__skills-hover-text {
   position: absolute;
-  font-size: var(--small-font-size);
-  color: var(--text-color);
-  bottom: -15px;
+  font-size: 0.875rem;
+  color: hsl(255, 8%, 45%);
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
@@ -95,12 +108,43 @@ text-align: left;
   display: grid;
   gap: 1.5rem;
 }
+.animation-left{
+  animation: slideFromLeft 1s forwards;
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity:0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.animation-right {
+  animation: slideFromRight 1s forwards;
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+    opacity:0;
+  }
+  to {
+    transform: translateX(0);
+    opacity:1;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
     align-items: center;
   }
-
+  .text-container{
+    margin-top: 20px;
+  }
   .logo {
     text-align: center;
   }

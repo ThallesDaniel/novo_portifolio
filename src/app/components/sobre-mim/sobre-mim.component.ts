@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./sobre-mim.component.scss']
 })
 export class SobreMimComponent implements OnInit{
+  hover = false;
   mostrarProjetos: boolean = false;
   estadoBotao: string = 'Próximo';
 
@@ -54,6 +55,8 @@ export class SobreMimComponent implements OnInit{
 
     this.estadoBotao = this.estadoBotao === 'Próximo' ? 'Anterior' : 'Próximo';
   }
+
+
   redirectToProjects() {
     this.mostrarProjetos = true;
     this.router.navigate(['/projetos']);
