@@ -15,7 +15,8 @@ export class SobreMimComponent implements OnInit{
   indiceTituloAtual: number = 0;
 
   subtituloAtual: string = '';
-  subtitulos: string[] = ['Possuo conhecimento aprofundado nas seguntes tecnologias:', 'Além das principais tecnologias, possuo experiência e habilidades em outras bibliotecas, linguagens e frameworks, incluindo: '];
+  subtitulos: string[] = ['Possuo conhecimento aprofundado nas seguntes tecnologias:', 'Além das principais tecnologias,' +
+  ' possuo experiência e habilidades em outras bibliotecas, linguagens e frameworks, incluindo: '];
   indiceSubTituloAtual: number = 0;
 
   textoAtual: string = '';
@@ -23,6 +24,7 @@ export class SobreMimComponent implements OnInit{
   'Front-end: HTML, SCSS, JavaScript, TypeScript, Angular\n' +
   'Back-end: Java, Spring, Python, PHP\n' +
   'Banco de Dados: PostgreSQL\n' +
+  'Vercionamento: Git, Github\n' +
   'Autodidata em Hacking Ético e Segurança Digital',
   'Ext.js\n' +
   'Next.js\n' +
@@ -49,6 +51,7 @@ export class SobreMimComponent implements OnInit{
 
     this.indiceTextoAtual = this.proximoIndice(this.indiceTextoAtual, this.textos);
     this.textoAtual = this.textos[this.indiceTextoAtual];
+
     this.estadoBotao = this.estadoBotao === 'Próximo' ? 'Anterior' : 'Próximo';
   }
   redirectToProjects() {

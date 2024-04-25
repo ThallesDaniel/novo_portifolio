@@ -1,4 +1,8 @@
-.text-container, .text-p {
+.text-container {
+  max-width: 600px;
+}
+
+.text-p {
   max-width: 400px;
 }
 
@@ -6,7 +10,6 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
   justify-content: space-around;
   margin-top: 40px;
 }
@@ -14,8 +17,6 @@
 .logo {
   text-transform: uppercase;
   font-style: italic;
-  margin-top: 10px;
-  max-width: 300px;
   width: 100%;
   color: #5d5d5d;
 }
@@ -41,7 +42,59 @@ text-align: left;
   background-color: #63c6ff;
   cursor: pointer;
 }
+.about__skills-title {
+  text-align: center;
+}
 
+.about__skills-img {
+  position: relative;
+  width: 35px;
+  transition: transform 0.4s;
+}
+
+.about__skills-img:hover {
+  transform: translateY(-0.5rem);
+
+}
+
+.about__skills-hover-text {
+  position: absolute;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.about__skills-img:hover .about__skills-hover-text {
+  opacity: 1;
+}
+
+.about__skills-img .about__skills-hover-text::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  transition: width 0.3s ease;
+  transition-delay: 0.3s;
+}
+
+.about__skills-img:hover .about__skills-hover-text::after {
+  width: 100%;
+}
+
+.about__skills-content {
+  grid-template-columns: repeat(5, max-content);
+  justify-content: center;
+  align-items: center;
+  gap: 2rem 1.5rem;
+}
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -50,5 +103,15 @@ text-align: left;
 
   .logo {
     text-align: center;
+  }
+  .about__skills-title {
+    text-align: initial;
+  }
+  .about__skills-content {
+    grid-template-columns: repeat(7, max-content);
+    justify-content: initial;
+  }
+  .about__skills-img {
+    width: 40px;
   }
 }
